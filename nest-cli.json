@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/banking-service-test/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/banking-service-test/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/banking-service-test",
+  "projects": {
+    "banking-service-test": {
+      "type": "application",
+      "root": "apps/banking-service-test",
+      "entryFile": "main",
+      "sourceRoot": "apps/banking-service-test/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/banking-service-test/tsconfig.app.json"
+      }
+    },
+    "transactions": {
+      "type": "application",
+      "root": "apps/transactions",
+      "entryFile": "main",
+      "sourceRoot": "apps/transactions/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/transactions/tsconfig.app.json"
+      }
+    },
+    "users-wallets": {
+      "type": "application",
+      "root": "apps/users-wallets",
+      "entryFile": "main",
+      "sourceRoot": "apps/users-wallets/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users-wallets/tsconfig.app.json"
+      }
+    }
+  }
+}
